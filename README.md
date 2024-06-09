@@ -21,11 +21,11 @@ Task, or also called a thread, is a simple program that thinks it has the CPU al
 Task is a function which Takes void and returns void only contains some lines of codes. Every task could be periodic task .
 
 Tasks have main three parameters:
-1. Function (pointer to function) *The lines of code that will be executed by CPU.* 
+1. **Function** (pointer to function) *The lines of code that will be executed by CPU.* 
 
-2. Periodicity *The periodic time of the task to be executed.*
+2. **Periodicity** *The periodic time of the task to be executed.*
 
-3. Priority *the more importance the task , the higher priority given to it .*
+3. **Priority** *the more importance the task , the higher priority given to it .*
 
 a Task my be repsented as
 ```
@@ -39,37 +39,37 @@ typedef struct
 
 Task States:
 
-1. Dormant *Task that resides in memory but has not been passed to the RTOS to start scheduling.*
+1. **Dormant** *Task that resides in memory but has not been passed to the RTOS to start scheduling.*
 
-2. Ready *Task that can execute but its priority is less than the currently running task*
+2. **Ready** *Task that can execute but its priority is less than the currently running task*
 
-3. Running *Task that has the control of CPU.*
+3. **Running** *Task that has the control of CPU.*
 
-4. Waiting *Task that requires the occurrence of an event.(for ex “waiting for an I/o operation”)*
+4. **Waiting** *Task that requires the occurrence of an event.(for ex “waiting for an I/o operation”)*
 
-5. ISR *When an interrupt has occurred and the CPU is in the process of service the interrupt*
+5. **ISR** *When an interrupt has occurred and the CPU is in the process of service the interrupt*
 
 
 Types of RTOS
 There're 2 famous types
 the last two s not widely common
-1. Hard Real-Time Operating System:  *These operating systems guarantee that critical tasks are completed within a range of time.*
+1. **Hard Real-Time Operating System**:  *These operating systems guarantee that critical tasks are completed within a range of time.*
 
 For example, a robot is hired to weld a car body. If the robot welds too early or too late, the car cannot be sold, so it is a hard real-time system that requires complete car welding by the robot hardly on time., scientific experiments, medical imaging systems, industrial control systems, weapon systems, robots, air traffic control systems, etc.
  
 
-2. Soft real-time operating system: *This operating system provides some relaxation in the time limit.* 
+2. **Soft real-time operating system**: *This operating system provides some relaxation in the time limit.* 
 
 For example – Multimedia systems, digital audio systems, etc.
 
 
-3. Firm Real-time Operating System: *is a middle ground between hard and soft RTOS types, RTOS of this type have to follow deadlines as well*. 
+3. **Firm Real-time Operating System**: *is a middle ground between hard and soft RTOS types, RTOS of this type have to follow deadlines as well*. 
 
 In spite of its small impact, missing a deadline can have unintended consequences, including a reduction in the quality of the product.
 
 Example: Multimedia applications.
 
-4. Deterministic Real-time operating System: *timing must be permanently precise , Consistency is the main key in this type of real-time operating system. It ensures that all the task and processes execute with predictable timing all the time*
+4. **Deterministic Real-time operating System**: *timing must be permanently precise , Consistency is the main key in this type of real-time operating system. It ensures that all the task and processes execute with predictable timing all the time*
 
 which make it more suitable for applications in which timing accuracy is very important. Examples: INTEGRITY, PikeOS.
 
@@ -93,10 +93,9 @@ RTOS services
 
 RTOS advantages
 
-* Reliability *Real time operating systems, especially those which are of hard RTOS are completely free of errors. It ensures a better way of handling errors. Besides, operating systems experience an issue known as jitter in which the amount of errors between subsequent loops is measured. If programmed correctly, a RTOS can be optimized in a way that it undergoes less amount of jitters.*
+* **Reliability** *Real time operating systems, especially those which are of hard RTOS are completely free of errors. It ensures a better way of handling errors. Besides, operating systems experience an issue known as jitter in which the amount of errors between subsequent loops is measured. If programmed correctly, a RTOS can be optimized in a way that it undergoes less amount of jitters.*
 
-* Predictability *A task can be predictable in time that it will be served and how much time and memory can be used for each task*
-* Performance *Increases performance of timing and memory*
-* Compactness 
-* Scalability *Can be run for many compilers and targets with the same source code*
-
+* **Predictability** *A task can be predictable in time that it will be served and how much time and memory can be used for each task*
+* **Performance** *Increases performance of timing and memory*
+* **Compactness** 
+* **Scalability** *Can be run for many compilers and targets with the same source code*
